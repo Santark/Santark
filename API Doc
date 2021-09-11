@@ -1,0 +1,136 @@
+Handle Expense POST
+====================
+POST    localhost:5000/handleExpense
+Content-type : application/json
+Accept : application/json
+{
+    "expense": "<float>",
+    "payerData": "<text>"
+    "groupId": <string>
+}
+
+ 
+RESPONSE
+=======
+200 OK
+{
+    "activityId": <integer>,
+    "success": "true"
+}
+ 
+ERROR
+=====
+500 INTERNAL SERVER ERROR           -- Could not get the required info
+400 BAD REQUEST                     -- Invalid Query
+404 Resource Not Found
+
+
+Handle Expense PUT
+====================
+PUT    localhost:5000/handleExpense
+Content-type : application/json
+Accept : application/json
+{
+    "activityId": "<int>"
+    "expense": "<float>",
+    "payerData": "<text>"
+}
+
+ 
+RESPONSE
+=======
+200 OK
+{
+    "success": "true"
+}
+ 
+ERROR
+=====
+500 INTERNAL SERVER ERROR           -- Could not get the required info
+400 BAD REQUEST                     -- Invalid Query
+404 Resource Not Found
+
+
+
+
+Handle Expense DELETE
+====================
+DELETE    localhost:5000/handleExpense
+Content-type : application/json
+Accept : application/json
+{
+    "activityId": "<int>"
+}
+
+ 
+RESPONSE
+=======
+200 OK
+{
+    "success": "true"
+}
+ 
+ERROR
+=====
+500 INTERNAL SERVER ERROR           -- Could not get the required info
+400 BAD REQUEST                     -- Invalid Query
+404 Resource Not Found
+
+
+
+
+Fetch User Details GET
+========================
+GET    localhost:5000/fetchUserDetails
+Content-type : application/json
+Accept : application/json
+{
+    "userId": "<int>"
+}
+
+ 
+RESPONSE
+=======
+200 OK
+{
+    "id": "<integer>",
+    "name": "<string>",
+    "email": "<string>",
+    "amount": "<float>",
+    "isExpenseNormalized": "<bool>",
+    "friendsInfo": "<text>"
+}
+ 
+ERROR
+=====
+500 INTERNAL SERVER ERROR           -- Could not get the required info
+400 BAD REQUEST                     -- Invalid Query
+404 Resource Not Found
+
+
+
+
+
+Fetch User Activity GET
+========================
+GET    localhost:5000/fetchUserActivity
+Content-type : application/json
+Accept : application/json
+{
+    "userId": "<int>"
+}
+
+ 
+RESPONSE
+=======
+200 OK
+{
+    "expense" = "<integer>",
+    "data" = "<text>"
+}
+ 
+ERROR
+=====
+500 INTERNAL SERVER ERROR           -- Could not get the required info
+400 BAD REQUEST                     -- Invalid Query
+404 Resource Not Found
